@@ -1,0 +1,22 @@
+
+
+.logo {
+    font-family:cursive;
+    font-size:large 
+}
+
+.md-button {
+    padding: 9px 10px;
+    margin-right: 2%;
+    font-size: 15px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #04AA6D;
+    border-radius: 5px;
+}
+
+thead {
+    vertical-align: middle !important;
+}

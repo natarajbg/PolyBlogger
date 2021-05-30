@@ -1,0 +1,48 @@
+table {
+    width: 100%;
+}
+
+.email {
+    width: 55%;
+}
+
+.action {
+    padding-left: 40px;
+}
+
+th {
+font-size: medium;
+}
+
+.spacer {
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.name {
+    padding-right: 20%;
+}
+
+button {
+    margin-right: 10px;
+    font-size: 15px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: black;
+    background-color: whitesmoke;
+    border-radius: 5px;
+}
+
+.mat-snack-bar-container {
+    color: rgba(0,0,0,.87);
+    background: lightgreen !important;
+}
+
+.mat-header-cell {  
+    vertical-align: middle !important;
+}
+
+.mat-row {
+    vertical-align: middle !important;
+}

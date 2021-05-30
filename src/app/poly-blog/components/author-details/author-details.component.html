@@ -1,0 +1,48 @@
+<div class="card col-md-5">
+    <div class="card-body">
+        <h3 class="card-title">Author Details</h3>
+        <div class="banner panel">
+            <div class="container panel">
+
+                <div class="form-group mb-2 col-md-12">
+                    <label class="form-label">Name</label>
+                    <input class="form-control" name="first_name" placeholder="Name" type="text"
+                        [(ngModel)]="user.name">
+                </div>
+
+                <div class="form-group mb-2 col-md-12">
+                    <label class="form-label">E Mail</label>
+                    <input class="form-control" name="first_name" placeholder="E mail" type="text"
+                        [(ngModel)]="user.email">
+                </div>
+
+                <div *ngIf="!isNewUser" class="form-group mb-2 col-md-12">
+                    <label class="form-label">User Id</label>
+                    <input class="form-control" name="first_name" placeholder="User Id" type="text"
+                        [(ngModel)]="user.id">
+                </div>
+
+                <div class="form-group mb-2 col-md-12">
+                    <label class="form-label">Gender</label>
+                    <input class="form-control" name="first_name" placeholder="Gender" type="text"
+                        [(ngModel)]="user.gender">
+                </div>
+
+                <div class="form-group mb-2 col-md-12">
+                    <label class="form-label">Status</label>
+                    <input class="form-control" name="first_name" placeholder="Status" type="text"
+                        [(ngModel)]="user.status">
+                </div>
+
+                <div *ngIf="isNewUser; else updateUser">
+                    <button (click)="createUser()" class="btn btn-primary">Create</button>
+                </div>
+
+                <ng-template #updateUser>
+                    <button (click)="update();" class="btn btn-primary">Update</button>
+                </ng-template>
+
+            </div>
+        </div>
+
+    </div>

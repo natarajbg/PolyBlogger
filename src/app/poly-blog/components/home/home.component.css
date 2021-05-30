@@ -1,0 +1,28 @@
+.author-name {
+    position:absolute;
+    left: 15px;
+    color:white
+}
+
+.mat-expansion-panel {
+    background: rgb(86, 86, 255);
+}
+
+.mat-expansion-panel-body {
+    color: rgb(86, 86, 255);
+    background-color: white;
+    padding-top: 10px;
+}
+
+button {
+    margin-right: 10px;
+    font-size: 15px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: black;
+    background-color: whitesmoke;
+    border-radius: 5px;
+}
+
+/* background: rgb(73, 73, 245); */

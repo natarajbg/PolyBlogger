@@ -1,0 +1,27 @@
+<table mat-table [dataSource]="todoList" class="table">
+
+    <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef class="width11"> <strong>Id</strong> </th>
+        <td mat-cell *matCellDef="let element" class="width11"> {{element.id}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="userId">
+        <th mat-header-cell *matHeaderCellDef class="width11"> <strong>User Id</strong> </th>
+        <td mat-cell *matCellDef="let element" class="width11"> {{element.user_id}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="title">
+        <th mat-header-cell *matHeaderCellDef> <strong>Title</strong> </th>
+        <td mat-cell *matCellDef="let element"> {{element.title}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="completed">
+        <th mat-header-cell *matHeaderCellDef class="width11"> <strong>Completed State</strong> </th>
+        <td mat-cell *matCellDef="let element" class="width11"> {{element.completed}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+<mat-paginator [length]="pageLength" [pageSize]="limit" (page)="getPaginatorData($event)">
+</mat-paginator>

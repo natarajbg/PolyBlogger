@@ -1,0 +1,41 @@
+<div class="banner panel">
+    <div class="container panel">
+        <div [hidden]="!showUserDetails">
+            <app-author-details></app-author-details>
+        </div>
+
+        <div *ngFor="let blog of blogList">
+            <mat-expansion-panel (opened)="openPanel(blog)" hideToggle>
+                <mat-expansion-panel-header>
+                    <mat-panel-title class="h6">
+                        {{blog.title}}
+                    </mat-panel-title>
+                    <!-- <mat-panel-description>                        
+                    </mat-panel-description> -->
+                </mat-expansion-panel-header>
+
+                <div>
+                    <p><em>{{blog.body}}</em></p>
+                </div>
+                <mat-action-row>
+                    <span class="author-name">
+                        <label>Posted By:  </label>
+                        <a style="color: #00a8ff;" href="javascript:void(0);"
+                            (click)="loadUserDetails()">  {{blog.user_name}}</a>
+                    </span>
+                    <fa-icon [icon]="iconVal" (click)="onDelete(blog)"></fa-icon>
+                </mat-action-row>
+            </mat-expansion-panel>
+        </div>
+        <div *ngIf="showPagination">
+            <mat-toolbar>
+                <mat-toolbar-row>
+                    <button routerLink="/create" class="create">Create</button>
+                    <span class="example-spacer"></span>
+                    <mat-paginator [length]="pageLength" [pageSize]="limit" (page)="getPaginatorData($event)">
+                    </mat-paginator>
+                </mat-toolbar-row>
+            </mat-toolbar>            
+        </div>
+    </div>
+</div>

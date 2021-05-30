@@ -1,0 +1,48 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-expansion-panel{
+    background: #ffffff !important;
+    border-radius: 0 !important;
+    box-shadow: none;
+    border:solid 1px #ddd;
+}
+.mat-expansion-panel-header-title{
+    color: #718093;
+    font-weight: normal !important;
+}
+.mat-expansion-panel-body{
+    color: black;
+}
+.mat-expansion-panel-header.mat-expanded{
+    margin-bottom: 6px;
+    border-bottom: solid 1px #000;
+    background: #e7f1ff !important;
+    color: #0c63e4 !important;
+    height: 50px !important;
+}
+.mat-action-row{
+    color: rgb(216, 20, 20);
+    border-top: solid 1px #718093;
+}
+.author-name > label, a{
+    color: #000;
+    font-weight: 500;
+}
+.mat-paginator{
+    width: 100%;
+}
+.card {
+    padding-bottom: 15px;
+}
+.mat-header-cell {  
+    vertical-align: middle !important;
+}
+
+.mat-row {
+    vertical-align: middle !important;
+}
